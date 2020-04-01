@@ -120,3 +120,6 @@ if something wrong, clear `.cache` folder.
  
 **DIST DEPENDENCY**
  - "pixi.js": "^5.2.1"
+
+**PREVIEW**
+<img src="https://images2.imgbox.com/6d/e1/FCHnsshh_o.png" width="120" />

@@ -1,0 +1,31 @@
+{
+  "name": "parcel-nw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "echos": "echo pretest",
+    "dist": "node --nolazy --inspect-brk config/dist.config.js --mode=dev",
+    "prod": "build --tasks win-x86,win-x64 --mirror https://dl.nwjs.io/ ./dist",
+    "nw": "npm run dev & (nw dist/ --remote-debugging-port=9222)"
+  },
+  "keywords": [
+    "boilerplate",
+    "pixijs",
+    "parcel",
+    "nwjs"
+  ],
+  "author": "jon.l",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "nw": "^0.44.5-sdk",
+    "nwjs-builder-phoenix": "^1.15.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "pixi.js": "^5.2.1"
+  }
+}

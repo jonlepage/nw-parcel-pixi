@@ -1,0 +1,41 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "compounds": [
+        {
+            "name": "Launch & Debug",
+            "configurations": ["Launch NWjs"],
+        }
+    ],
+    
+    "configurations": [
+        {
+            "type": "nwjs",
+            "request": "launch",
+            "name": "Launch NWjs",
+            "runtimeExecutable": "${workspaceRoot}\\node_modules\\nw\\nwjs\\nw.exe",
+            "runtimeArgs": [
+                "--disable-raf-throttling",
+                "--remote-debugging-port=9222",
+            ],
+            "webRoot": "${workspaceRoot}/dist",
+            "port": 9222,
+            "reloadAfterAttached": true,
+            "preLaunchTask": "npm: dist"
+        },
+        {
+            "name": "Launch dist",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run-script", "dist"],
+            "port": 9229,
+            "console": "integratedTerminal",
+            "autoAttachChildProcesses": true,
+
+        },
+    ]
+}

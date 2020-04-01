@@ -1,6 +1,6 @@
-folder where store all config to bundle src to dist or prod
-need Node as global dependency in your OS to run those files
-
-#npm run dev
-bundler dev version in dist
-#npm run nw
+**CUSTOMZE CONFIG**
+All custom configs are inside folder `config` and are write in nodejs vanilla
+- `dist.config.js` is the main builder
+- `nw.js` it the custom hack and cloning the `nw_package.json` 
+- `parcel.js` is the custom hack API for manage bundle to build `dist` folder
+- `copy.js` is the custom hack for cloning ressources from `scr` to dist `folder` to make nwjs app work.

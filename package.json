@@ -7,7 +7,7 @@
     "echos": "echo pretest",
     "dist": "node --nolazy --inspect-brk config/dist.config.js --mode=dev",
     "prod": "build --tasks win-x86,win-x64 --mirror https://dl.nwjs.io/ ./dist",
-    "nw": "npm run dev & (nw dist/ --remote-debugging-port=9222)"
+    "nw": "npm run dist & nw dist/ --remote-debugging-port=9222"
   },
   "keywords": [
     "boilerplate",

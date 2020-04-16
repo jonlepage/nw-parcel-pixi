@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cd ./node_modules/nw  &&  npm install",
+    "postinstall": "cd ./node_modules/nw  &&  npm install --nwjs_build_type=sdk",
     "dist": "node --nolazy --inspect-brk config/dist.config.js --mode=dev",
     "prod": "build --tasks win-x86,win-x64 --mirror https://dl.nwjs.io/ ./dist",
     "nw": "npm run dist & nw dist/ --remote-debugging-port=9222"
